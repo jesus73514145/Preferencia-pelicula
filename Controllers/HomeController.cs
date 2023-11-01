@@ -21,11 +21,17 @@ public class HomeController : Controller {
         new Pelicula { Id = 3, Nombre = "La La Land", GeneroId = 3 }
     };
 
+
+    /* EN ESTA VISTA SE PUEDE VER EL FORMULARIO 
+    PARA SELECCIONAR LA PELICULA Y EL GENERO DE LA PELICULA */
     public IActionResult Index() {
         ViewBag.Generos = generos;
         ViewBag.Peliculas = peliculas; // Agrega esta línea para inicializar Peliculas
         return View();
     }
+
+    /* ESTE METODO ES PARA PODER MANDAR LOS DATOS QUE PUSE EN LE FORMULARIO A OTRA VISTA
+    QUE TAMBIEN ASI COMO EL METODO POST SE LLLAMA RESUMEN */
 
     [HttpPost]
     public IActionResult Resumen(int generoId, int peliculaId) {
