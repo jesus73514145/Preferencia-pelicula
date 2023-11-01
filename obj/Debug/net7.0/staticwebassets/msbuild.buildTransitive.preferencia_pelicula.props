@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\preferencia_pelicula.props" />
+</Project>

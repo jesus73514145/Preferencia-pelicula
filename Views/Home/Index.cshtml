@@ -1,0 +1,28 @@
+﻿@model preferencia_pelicula.Models.Genero
+
+<h2>Encuesta de Preferencias de Películas</h2>
+
+<form asp-controller="Home" asp-action="Resumen" method="post">
+    <div class="form-group">
+        <label for="GeneroId">Género Favorito:</label>
+        <div>
+            @foreach (var genero in ViewBag.Generos)
+            {
+                <label class="radio-inline">
+                    <input type="radio" name="generoId" value="@genero.Id" required /> @genero.Nombre
+                </label>
+            }
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PeliculaId">Película Favorita:</label>
+        <select class="form-control" name="peliculaId" required>
+            <option value="">Selecciona una película...</option>
+            @foreach (var pelicula in ViewBag.Peliculas)
+            {
+                <option value="@pelicula.Id">@pelicula.Nombre</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Obtener Resumen</button>
+</form>

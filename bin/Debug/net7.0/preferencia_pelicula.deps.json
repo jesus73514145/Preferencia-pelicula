@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "preferencia_pelicula/1.0.0": {
+        "runtime": {
+          "preferencia_pelicula.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "preferencia_pelicula/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
